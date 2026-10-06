@@ -1,8 +1,8 @@
 // Test HC-SR04 - Jarvis Victor
 // Trig = D26, Echo = D25 (adapté du schéma officiel GPIO5/GPIO18)
 
-const int trigPin = 26;
-const int echoPin = 25;
+const int trigPin = 5;
+const int echoPin = 18;
 
 void setup() {
   Serial.begin(115200);       // vitesse moniteur série standard ESP32
