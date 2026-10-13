@@ -1,5 +1,5 @@
 // Test HC-SR04 - Jarvis Victor
-// Trig = D26, Echo = D25 (adapté du schéma officiel GPIO5/GPIO18)
+// Trig = D5, Echo = D18 (adapté du schéma officiel GPIO5/GPIO18)
 
 const int trigPin = 5;
 const int echoPin = 18;
