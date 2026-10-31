@@ -1,11 +1,14 @@
 // Test HC-SR04 - Jarvis Victor
-// Trig = D5, Echo = D18 (adapté du schéma officiel GPIO5/GPIO18)
+// Trig = GPIO5, Echo = GPIO18 (adapté du schéma officiel)
 
 const int trigPin = 5;
 const int echoPin = 18;
 
 void setup() {
-  Serial.begin(115200);       // vitesse moniteur série standard ESP32
+  Serial.begin(115200);        // 1) ouvrir le port série EN PREMIER
+  delay(500);                  // petite attente pour que la liaison soit prête
+  Serial.println("JV-EFF002"); // 2) puis envoyer le marqueur
+
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
 }
@@ -31,5 +34,5 @@ void loop() {
     Serial.println(" cm");
   }
 
-  delay(500); // une mesure toutes les 0,5s
+  delay(500); // une mesure toutes les 0,5 s
 }
